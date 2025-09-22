@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Black Cord Production - Video Production Agency Design System */
+
+@layer base {
+  :root {
+    /* Core Brand Colors */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 5%;
+    
+    /* Brand Identity */
+    --brand-black: 0 0% 8%;
+    --brand-red: 0 84% 50%;
+    --brand-red-dark: 0 84% 40%;
+    --brand-white: 0 0% 98%;
+    
+    /* Video Production Theme */
+    --cinema-black: 0 0% 3%;
+    --cinema-red: 0 85% 55%;
+    --cinema-white: 0 0% 100%;
+    
+    /* Semantic Design Tokens */
+    --primary: var(--brand-black);
+    --primary-foreground: var(--brand-white);
+    
+    --secondary: var(--brand-red);
+    --secondary-foreground: var(--brand-white);
+    
+    --accent: var(--cinema-red);
+    --accent-foreground: var(--cinema-white);
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--cinema-black)), hsl(var(--brand-black)));
+    --gradient-accent: linear-gradient(90deg, hsl(var(--brand-red)), hsl(var(--cinema-red)));
+    --gradient-subtle: linear-gradient(180deg, hsl(var(--brand-white)), hsl(0 0% 96%));
+    
+    /* Effects */
+    --shadow-glow: 0 0 40px hsl(var(--brand-red) / 0.3);
+    --shadow-cinema: 0 10px 40px hsl(var(--cinema-black) / 0.5);
+    
+    /* Component tokens */
+    --card: var(--brand-white);
+    --card-foreground: var(--brand-black);
+    
+    --popover: var(--brand-white);
+    --popover-foreground: var(--brand-black);
+    
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 40%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: var(--brand-white);
+    
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: var(--brand-red);
+    
+    --radius: 0.75rem;
+    
+    /* Animations & Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .dark {
+    --background: var(--cinema-black);
+    --foreground: var(--brand-white);
+    
+    --card: var(--brand-black);
+    --card-foreground: var(--brand-white);
+    
+    --popover: var(--brand-black);
+    --popover-foreground: var(--brand-white);
+    
+    --primary: var(--brand-white);
+    --primary-foreground: var(--brand-black);
+    
+    --secondary: var(--brand-red);
+    --secondary-foreground: var(--brand-white);
+    
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 60%;
+    
+    --accent: var(--cinema-red);
+    --accent-foreground: var(--cinema-white);
+    
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: var(--brand-red);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-montserrat;
+  }
+}
